@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .map-icon {
+            width: 60px;
+            height: 60px;
+            top: 10px;
+            left: 50px;
+            position: relative;
+            transform: rotate(45deg);
+        }
+
+        .map-icon:before,
+        .map-icon:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50% 50% 0 50%;
+            background: #40ff60;
+            -webkit-mask: radial-gradient(circle 10px at 50% 50%, #0000 94%, #000);
+        }
+
+        .map-icon:after {
+            animation: pulsing 1s infinite;
+            transform: perspective(300px) translateZ(0px);
+        }
+
+        @keyframes pulsing {
+            to {
+                transform: perspective(300px) translateZ(150px);
+                opacity: 0;
+            }
+        }
+    </style>
+    <title>theraj_coder</title>
+</head>
+
+<body>
+    <h1>Map Icon </h1>
+    <div class="map-icon"></div>
+</body>
+
+</html>
